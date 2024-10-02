@@ -1,10 +1,10 @@
 {
     "name": "hybridauth/hybridauth",
-    "description": "PHP Social Authentication Library",
-    "keywords": ["oauth", "openid", "authentication", "authorization", "social", "api", "google", "facebook", "twitter", "apple"],
-    "homepage": "https://hybridauth.github.io",
+    "description": "Open source social sign on PHP library.",
+    "keywords": ["hybridauth", "login", "oauth", "social", "openid", "facebook", "google", "twitter", "yahoo"],
+    "homepage": "http://hybridauth.sourceforge.net",
     "type": "library",
-    "license": "MIT",
+    "license": "(MIT or GPL-3.0+)",
     "authors": [
         {
             "name": "Miled",
@@ -12,28 +12,26 @@
         }
     ],
     "support": {
+        "email": "hybridauth@gmail.com",
+        "forum": "https://groups.google.com/d/forum/hybridauth",
         "issues": "https://github.com/hybridauth/hybridauth/issues",
         "gitter": "https://gitter.im/hybridauth/hybridauth"
     },
     "require": {
-        "php": "^5.4 || ^7.0 || ^8.0"
+        "php": ">=5.2.0",
+        "ext-curl": "*",
+        "facebook/graph-sdk": "^5.4",
+        "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
-        "ext-curl": "*",
-        "phpunit/phpunit": "^4.8.35 || ^6.5 || ^8.0"
-    },
-    "suggest": {
-        "firebase/php-jwt": "Needed to support Apple provider",
-        "phpseclib/phpseclib": "Needed to support Apple provider"
+        "squizlabs/php_codesniffer": "2.*"
     },
     "autoload": {
-        "psr-4": {
-           "Hybridauth\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-           "HybridauthTest\\Hybridauth\\": "test/"
-        }
+        "psr-0": {
+            "Hybrid": "hybridauth/"
+        },
+        "classmap":[
+          "hybridauth/Hybrid"
+        ]
     }
 }
