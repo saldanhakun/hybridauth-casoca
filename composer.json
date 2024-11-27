@@ -20,7 +20,7 @@
     "require": {
         "php": ">=5.2.0",
         "ext-curl": "*",
-        "facebook/graph-sdk": "^5.4",
+        "facebook/graph-sdk": "=5.6.3",
         "saldanhakun/magento-paypal-rest-api-sdk-php": "dev-main"
     },
     "require-dev": {
